@@ -18,7 +18,7 @@ module.exports = {
         onDelete: 'SET NULL',
         allowNull: true,
       },
-      porvider_id: {
+      provider_id: {
         type: Sequelize.INTEGER,
         references: { model: 'users', key: 'id' },
         onUpdate: 'CASCADE',
@@ -40,6 +40,6 @@ module.exports = {
   },
 
   down: queryInterface => {
-    return queryInterface.dropTable('appoitments');
+    return queryInterface.dropTable('appointments');
   },
 };
