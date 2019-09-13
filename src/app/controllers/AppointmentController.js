@@ -64,7 +64,9 @@ class AppointmentController {
     }
 
     if (checkIsProvider.id === req.userId) {
-      return res.status(401).json({ error: 'you cannot schedule' });
+      return res
+        .status(401)
+        .json({ error: "you can't schedule with yourself" });
     }
 
     /**
